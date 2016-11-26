@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: clients
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer          not null
+#  address     :string
+#  city        :string
+#  postal_code :string
+#  phone       :string
+#  birthdate   :date
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  address: MyString
+  city: MyString
+  postal_code: MyString
+  phone: MyString
+  birthdate: 2016-11-26
+
+two:
+  user_id: 1
+  address: MyString
+  city: MyString
+  postal_code: MyString
+  phone: MyString
+  birthdate: 2016-11-26

@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: coaches
+#
+#  id              :integer          not null, primary key
+#  user_id         :integer          not null
+#  gender          :string
+#  description     :text
+#  validation_date :datetime
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  gender: MyString
+  description: MyText
+  validation_date: 2016-11-26 11:02:35
+
+two:
+  user_id: 1
+  gender: MyString
+  description: MyText
+  validation_date: 2016-11-26 11:02:35
