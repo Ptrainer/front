@@ -13,15 +13,16 @@
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #
-# Index: email, password
+# Index: email, identification_token
 
 # app/models/user.rb
 class User < ApplicationRecord
   has_one :client
-  has_one :coach
+  has_one :coach  
 
   validates_presence_of :email, :password
-  validates_uniqueness_of :email, :identification_token
+  validates_uniqueness_of :identification_token, allow_nil: true
+  validates_uniqueness_of :email
   validate :unique_users_type
 
   def unique_users_type
