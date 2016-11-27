@@ -4,6 +4,7 @@ AllCops:
     - 'config/initializers/*'
     - 'config/environments/*'
     - 'bin/spring'
+    - 'db/migrate/*'
 Metrics/LineLength:
   Max: 90
 Metrics/MethodLength:

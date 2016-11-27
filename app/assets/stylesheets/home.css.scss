@@ -1,0 +1,276 @@
+#search-coach {
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 14px 0px;
+    box-sizing: border-box;
+    color: rgb(67, 95, 113);
+    height: 58px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 890px;
+    z-index: 10;
+    column-rule-color: rgb(67, 95, 113);
+    perspective-origin: 445px 29px;
+    transform-origin: 445px 29px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 6px 6px 6px 6px;
+    font: normal normal normal normal 12px / 17.1429px "Open Sans", sans-serif;
+    outline: rgb(67, 95, 113) none 0px;
+}
+
+#search-coach-form {
+    box-sizing: border-box;
+    color: rgb(67, 95, 113);
+    height: 54px;
+    text-size-adjust: 100%;
+    width: 886px;
+    column-rule-color: rgb(67, 95, 113);
+    perspective-origin: 443px 27px;
+    transform-origin: 443px 27px;
+    border: 0px none rgb(67, 95, 113);
+    font: normal normal normal normal 12px / 17.1429px "Open Sans", sans-serif;
+    margin: 0px;
+    outline: rgb(67, 95, 113) none 0px;
+}
+
+#search-coach-name {
+    color: rgb(67, 95, 113);
+    height: 54px;
+    text-size-adjust: 100%;
+    width: 239.219px;
+    column-rule-color: rgb(67, 95, 113);
+    perspective-origin: 119.609px 27px;
+    transform-origin: 119.609px 27px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(67, 95, 113);
+    font: normal normal normal normal 14px / 20px "Open Sans", sans-serif;
+    outline: rgb(67, 95, 113) none 0px;
+    padding: 1px 1px 1px 14px;
+}/*#INPUT_5*/
+
+.block-search-coach {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(67, 95, 113);
+    display: inline-block;
+    height: 54px;
+    left: 0px;
+    position: relative;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    vertical-align: top;
+    width: 239.219px;
+    column-rule-color: rgb(67, 95, 113);
+    perspective-origin: 119.609px 27px;
+    transform-origin: 119.609px 27px;
+    border-top: 0px none rgb(67, 95, 113);
+    border-right: 0px none rgb(67, 95, 113);
+    border-bottom: 0px none rgb(67, 95, 113);
+    border-left: 1px solid rgb(238, 238, 238);
+    font: normal normal normal normal 12px / 17.1429px "Open Sans", sans-serif;
+    outline: rgb(67, 95, 113) none 0px;
+}
+
+#placeholder-select-discipline {
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    display: block;
+    height: 54px;
+    text-align: left;
+    text-size-adjust: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 184.219px;
+    column-rule-color: rgb(153, 153, 153);
+    perspective-origin: 92.1094px 27px;
+    transform-origin: 92.1094px 27px;
+    user-select: none;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 14px / 54px "Open Sans", sans-serif;
+    margin: 0px 26px 0px 26px;
+    outline: rgb(153, 153, 153) none 0px;
+    overflow: hidden;
+}
+
+#manage-glyphicon-select-discipline {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    display: block;
+    height: 54px;
+    left: 218.219px;
+    position: absolute;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 0px;
+    white-space: nowrap;
+    width: 20px;
+    column-rule-color: rgb(153, 153, 153);
+    perspective-origin: 10px 27px;
+    transform-origin: 10px 27px;
+    user-select: none;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal normal 14px / 54px "Open Sans", sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}
+
+#glyphicon-select-discipline {
+    background-position: 0px 1px;
+    bottom: 22px;
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    display: block;
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    text-size-adjust: 100%;
+    top: 12px;
+    white-space: nowrap;
+    width: 20px;
+    column-rule-color: rgb(153, 153, 153);
+    perspective-origin: 10px 10px;
+    transform-origin: 10px 10px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0) url("https://www.doctolib.fr/assets/select2x2-6fe28d687dc0ed4d96016238c608ba1e7198c9c9accfa0b360b78018b9fb9bc2.png") no-repeat scroll 0px 1px / 60px 40px padding-box border-box;
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal bold normal 14px / 54px "Open Sans", sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}
+
+#position-search-location {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: rgba(67, 95, 113, 0.6);
+    cursor: pointer;
+    display: block;
+    height: 54px;
+    left: 198.219px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    text-size-adjust: 100%;
+    top: 0px;
+    width: 40px;
+    column-rule-color: rgba(67, 95, 113, 0.6);
+    perspective-origin: 20px 27px;
+    transform-origin: 20px 27px;
+    background: rgb(238, 242, 246) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 0px none rgba(67, 95, 113, 0.6);
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 0px none rgba(67, 95, 113, 0.6);
+    border-left: 1px solid rgb(238, 242, 246);
+    font: normal normal normal normal 16px / 54px "Open Sans", sans-serif;
+    outline: rgba(67, 95, 113, 0.6) none 0px;
+    transition: all 0.3s linear 0s;
+}
+
+#position-search-location:before {
+    box-sizing: border-box;
+    color: rgba(67, 95, 113, 0.6);
+    cursor: pointer;
+    speak: none;
+    text-align: center;
+    text-size-adjust: 100%;
+    column-rule-color: rgba(67, 95, 113, 0.6);
+    border: 0px none rgba(67, 95, 113, 0.6);
+    font: normal normal normal normal 16px / 54px doctolib;
+    outline: rgba(67, 95, 113, 0.6) none 0px;
+}
+
+#input-where-coach {
+    color: rgb(67, 95, 113);
+    height: 54px;
+    text-size-adjust: 100%;
+    width: 238.219px;
+    column-rule-color: rgb(67, 95, 113);
+    perspective-origin: 119.109px 27px;
+    transform-origin: 119.109px 27px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(67, 95, 113);
+    font: normal normal normal normal 14px / 20px "Open Sans", sans-serif;
+    outline: rgb(67, 95, 113) none 0px;
+    padding: 1px 40px 1px 14px;
+}
+
+#position-search-coach {
+    box-sizing: border-box;
+    color: rgb(67, 95, 113);
+    display: inline-block;
+    height: 54px;
+    text-size-adjust: 100%;
+    vertical-align: top;
+    width: 155px;
+    column-rule-color: rgb(67, 95, 113);
+    perspective-origin: 84.1562px 27px;
+    transform-origin: 84.1562px 27px;
+    border: 0px none rgb(67, 95, 113);
+    font: normal normal normal normal 12px / 17.1429px "Open Sans", sans-serif;
+    outline: rgb(67, 95, 113) none 0px;
+}
+
+#sur-button-search-coach {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    height: 54px;
+    min-height: 0px;
+    text-size-adjust: 100%;
+    width: 157px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 84.1562px 27px;
+    transform-origin: 84.1562px 27px;
+    background: rgb(255, 126, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 0 5px 5px 0;
+    font: normal normal normal normal 18px / 25.7143px Amaranth;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 0px;
+}
+
+#button-search-coach {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    text-align: center;
+    text-size-adjust: 100%;
+    vertical-align: middle;
+    width: 82.4688px;
+    column-rule-color: rgb(255, 255, 255);
+    align-self: flex-start;
+    perspective-origin: 41.2344px 12.5px;
+    transform-origin: 41.2344px 12.5px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 18px / 25.7143px Amaranth;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+#or-search {
+    bottom: 11px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 32px;
+    left: 244px;
+    position: absolute;
+    right: 630.781px;
+    text-align: center;
+    text-size-adjust: 100%;
+    top: 27px;
+    width: 32px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 16px 16px;
+    transform-origin: 16px 16px;
+    background: rgb(67, 95, 113) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 32px 32px 32px 32px;
+    font: normal normal normal normal 10px / 32px "Open Sans", sans-serif;
+    margin: -16px 0px 0px -16px;
+    outline: rgb(255, 255, 255) none 0px;
+}
