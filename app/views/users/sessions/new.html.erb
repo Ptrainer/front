@@ -13,11 +13,6 @@
   margin-left: 50px;
 }
 
-h2 {
-  padding: 20px;
-  color: #ecf0f1;
-}
-
 fieldset {
   border: none;
 }
@@ -53,7 +48,7 @@ fieldset {
 }
 .formholder input[type="email"]:focus, .formholder input[type="password"]:focus {
   outline: none;
-  box-shadow: 0 0 1px 1px #1abc9c;
+  box-shadow: 0 0 1px 1px #0596de;
 }
 .formholder input[type="submit"] {
   background: #0596de;
@@ -73,10 +68,6 @@ fieldset {
   padding: 10px;
 }
 
-.green {
-  color: #1abc9c;
-}
-
 a {
   color: #ecf0f1;
   text-decoration: none;
@@ -92,12 +83,10 @@ a:hover {
     <fieldset>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%#= f.label :email %>
         <%= f.email_field :email, autofocus: true, placeholder: 'Email' %>
       </div>
 
       <div class="field">
-        <%#= f.label :password %>
         <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
       </div>
 

@@ -44,6 +44,8 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 
 gem 'devise'
 
+gem 'react-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
