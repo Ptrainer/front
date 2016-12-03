@@ -3,12 +3,35 @@
   <head>
     <title>Website</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar navbar-default navbar-color">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Notre Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Un lien</a></li>
+          </ul>
+          <ul id="sign-in-link" class="nav navbar-nav navbar-right">
+            <% if current_user %>
+              <li><a><%= current_user.email %></a></li>
+            <% end %>
+            <li id="sign-in-li"><a id="sign-in-relink"><%= react_component 'SignIn', { sign_in: @partial_sign_in, showSignIn: false, currentUser: current_user } %></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
