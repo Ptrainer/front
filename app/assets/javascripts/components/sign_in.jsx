@@ -11,9 +11,11 @@ var SignIn = React.createClass({
     document.getElementById('sign-in-link').removeEventListener('click', this.handleShowSignIn)
   },
   handleHideSignIn: function (e) {
-    console.log(e.target)
+    // console.log(e.target)
     var tmp = $('#'+e.target.id).parents('ul').attr('id')
-    if (tmp != 'sign-in-link' && $(".login").has(e.target).length <= 0) {
+    // console.log(tmp)
+    if (tmp != 'sign-in-link' && $(".login").has(e.target).length <= 0 && tmp != 'sign-up-link') {
+      console.log('on cache sign in')
       ReactDOM.render(<div />, document.getElementById('signin'));
       this.state.showSignIn = false
     }
@@ -36,7 +38,7 @@ var SignIn = React.createClass({
   },
   render: function() {
     if (this.props.currentUser) {
-      return <span onClick={this.handleSignOut}>Déconnexion</span>
+      return <a rel="nofollow" data-method="delete" href="/users/sign_out">Déconnexion</a>
     }
     return <span id="signin-show">Connexion</span>
   }

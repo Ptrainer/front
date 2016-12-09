@@ -30,6 +30,8 @@
 
 # app/models/user.rb
 class User < ApplicationRecord
+  attr_accessor :user_type
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
@@ -40,7 +42,15 @@ class User < ApplicationRecord
   # validates_uniqueness_of :email
   validate :unique_users_type
 
+  # before_save :user_type
+
   def unique_users_type
     return errors.add(:base, 'error message') if client.present? && coach.present?
   end
+
+  # def user_type
+    # if user_type == 'client'
+    # Client.new(user_id: id) if user_type == 'client'
+    # Coach.new(user_id: id) if user_type == 'coach'
+  # end
 end

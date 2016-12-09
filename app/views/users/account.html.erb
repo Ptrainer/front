@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-sm-7">
+    <div class="well">
+      <%= form_for(@user, url: account_user_path(@user)) do |f| %>
+        <h5 class="confidential"><i class="dicon-lock"></i>Ces données sont là.</h5>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group select required account_gender">
+              <label class="select required control-label sr-only" for="account_gender">
+                <abbr title="requis">*</abbr> Genre</label>
+                <select class="select required form-control" name="account[gender]" id="account_gender">
+                  <option value="true">Mme</option>
+                  <option value="false">M.</option>
+                </select>
+            </div>
+          </div>
+        <div class="col-md-4 form-group space string required account_first_name">
+        <label class="string required control-label sr-only" for="account_first_name"><abbr title="requis">*</abbr> Prénom</label>
+        <input class="string required form-control" maxlength="255" placeholder="Prénom" size="255" type="text" value="" name="account[first_name]" id="account_first_name">
+      </div>
+      <div class="col-md-5 form-group space string required account_last_name">
+        <label class="string required control-label sr-only" for="account_last_name"><abbr title="requis">*</abbr> Nom de famille</label>
+        <input class="string required form-control" maxlength="255" placeholder="Nom" size="255" type="text" value="" name="account[last_name]" id="account_last_name">
+      </div></div><div class="row form-row"><div class="col-md-12 form-group email required account_email"><label class="email required control-label sr-only" for="account_email"><abbr title="requis">*</abbr> Email</label><input remote="/validators/uniqueness?kind=patient" class="string email required form-control" maxlength="255" placeholder="Adresse email" type="email" size="255" value="" name="account[email]" id="account_email"></div></div><div class="row form-row"><div class="col-md-12 form-group"><a data-toggle="modal" class="pull-right" href="#password-modification-popin">Modifier mon mot de passe</a></div></div><hr><div class="row form-row"><div class="col-md-4 form-group"><label class="control-label">Date de naissance</label></div><div class="col-md-8 date-selects"><div class="form-group date required account_birthdate"><div class="form-inline">
+  <select id="account_birthdate_3i" name="account[birthdate(3i)]" class="date required form-control">
+    <option value="">Jour</option>
+    <option value="1">1</option>
+    <option value="2" selected="selected">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+    <select id="account_birthdate_2i" name="account[birthdate(2i)]" class="date required form-control">
+    <option value="">Mois</option>
+    <option value="1" selected="selected">janvier</option>
+  </select>
+  <select id="account_birthdate_1i" name="account[birthdate(1i)]" class="date required form-control">
+    <option value="">Année</option>
+    <option value="1879">1879</option>
+    <option value="1880">1880</option>
+    <option value="1881">1881</option>
+  </select>
+  </div></div></div></div>
+  <div class="row form-row">
+  <div class="col-md-12 form-group string optional account_master_patient_address">
+  <label class="string optional control-label sr-only" for="account_master_patient_address">Adresse</label>
+  <input class="string optional form-control" maxlength="255" placeholder="Adresse" size="255" type="text" name="account[master_patient][address]" id="account_master_patient_address"></div></div>
+  <div class="row form-row">
+  <div class="col-md-4 form-group string optional account_master_patient_zipcode">
+  <label class="string optional control-label sr-only" for="account_master_patient_zipcode">Code postal</label>
+  <input pattern="^[0-9]{5}$" class="string optional form-control" maxlength="255" placeholder="Code postal" size="255" type="text" name="account[master_patient][zipcode]" id="account_master_patient_zipcode"></div>
+  <div class="col-md-8 form-group space string optional account_master_patient_city">
+  <label class="string optional control-label sr-only" for="account_master_patient_city">Ville</label>
+  <input class="string optional form-control" maxlength="255" placeholder="Ville" size="255" type="text" name="account[master_patient][city]" id="account_master_patient_city"></div></div><hr><div class="row form-row">
+  <div class="col-md-6 form-group tel required account_phone_number">
+  <label class="tel required control-label sr-only" for="account_phone_number">
+  <abbr title="requis">*</abbr> Téléphone portable</label>
+  <div class="intl-tel-input">
+  <div class="flag-dropdown">
+  </li></ul></div><input remote="/validators/phone_number" value="" class="string tel required form-control" maxlength="255" placeholder="Téléphone portable" type="tel" size="255" name="account[phone_number]" id="account_phone_number" autocomplete="off"></div></div></div><input type="submit" name="commit" value="Enregistrer" class="btn btn-default btn-cta btn-alternate" data-disable-with="Enregistrement...">
+  <% end %>
+  </div>
+
+  <form class="well ng-pristine ng-valid" id="edit_account_2648850" action="/account" accept-charset="UTF-8" method="post" novalidate="novalidate">
+  <h4>Suppression de votre compte Ptrainer</h4><p>Si vous ne souhaitez plus utiliser Ptrainer, vous avez la possibilité de supprimer votre compte.<br>Cette action irréversible aura pour effet d'effacer vos données personnelles et de connexion de la base de données de Ptrainer.</p><input type="submit" name="commit" value="Supprimer mon compte" class="btn btn-cta btn-danger" data-confirm="Cette action n'est pas réversible.
+  Êtes-vous sûr(e) de vouloir supprimer votre compte ?" data-disable-with="Suppression...">
+  </form>
+  </div>
+</div>
