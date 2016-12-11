@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :first_name
       t.string :last_name
       t.string :email, null: false, default: ''
-      t.datetime :validation_date
+      t.string :gender
       t.integer :language_id
       t.timestamps
     end

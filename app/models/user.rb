@@ -6,7 +6,7 @@
 #  first_name             :string
 #  last_name              :string
 #  email                  :string           default(""), not null
-#  validation_date        :datetime
+#  gender                 :string
 #  language_id            :integer
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
@@ -30,6 +30,9 @@
 
 # app/models/user.rb
 class User < ApplicationRecord
+  GENDERS = %w(MR MRS OTHER).freeze
+  attr_accessor :user_type
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
@@ -39,8 +42,16 @@ class User < ApplicationRecord
   # validates_presence_of :email
   # validates_uniqueness_of :email
   validate :unique_users_type
+  validates :gender, inclusion: { in: GENDERS + [nil] }
+
+  # before_save :user_type
 
   def unique_users_type
     return errors.add(:base, 'error message') if client.present? && coach.present?
   end
+
+  # def user_type
+  #   Client.new(user_id: id) if user_type == 'client'
+  #   Coach.new(user_id: id) if user_type == 'coach'
+  # end
 end

@@ -20,9 +20,9 @@ class Client < ApplicationRecord
 
   validates_presence_of :user_id
   validates_uniqueness_of :user_id
-  validate :no_coach
+  # validate :no_coach
 
-  def no_coach
-    return errors.add(:base, 'error message') if user.coach.present?
-  end
+  # def no_coach
+  #   return errors.add(:base, 'error message') if user.coach.present?
+  # end
 end
