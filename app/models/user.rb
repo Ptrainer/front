@@ -49,8 +49,7 @@ class User < ApplicationRecord
   end
 
   # def user_type
-    # if user_type == 'client'
-    # Client.new(user_id: id) if user_type == 'client'
-    # Coach.new(user_id: id) if user_type == 'coach'
+  #   Client.new(user_id: id) if user_type == 'client'
+  #   Coach.new(user_id: id) if user_type == 'coach'
   # end
 end
