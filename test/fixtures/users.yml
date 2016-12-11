@@ -6,7 +6,7 @@
 #  first_name             :string
 #  last_name              :string
 #  email                  :string           default(""), not null
-#  validation_date        :datetime
+#  gender                 :string
 #  language_id            :integer
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null

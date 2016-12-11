@@ -15,7 +15,6 @@ var SignIn = React.createClass({
     var tmp = $('#'+e.target.id).parents('ul').attr('id')
     // console.log(tmp)
     if (tmp != 'sign-in-link' && $(".login").has(e.target).length <= 0 && tmp != 'sign-up-link') {
-      console.log('on cache sign in')
       ReactDOM.render(<div />, document.getElementById('signin'));
       this.state.showSignIn = false
     }

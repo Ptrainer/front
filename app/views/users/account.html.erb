@@ -2,35 +2,34 @@
   <div class="col-sm-6">
     <div class="well">
       <%= form_for(@user, url: update_account_user_path(@user), method: 'POST') do |f| %>
-        <h5 class="confidential"><i class="dicon-lock"></i>Ces données sont là.</h5>
+        <h5 class="confidential"><i class="dicon-lock"></i>Ces données sont là. <%= t('hello') %></h5>
         <div class="row">
           <div class="col-md-3">
             <div class="form-group select required account_gender">
-              <label class="select required control-label sr-only" for="account_gender">
-                <abbr title="requis">*</abbr> Genre</label>
-                <select class="select required form-control" name="account[gender]" id="account_gender">
-                  <option value="true">Mme</option>
-                  <option value="false">M.</option>
-                </select>
+              <!-- <label class="select required control-label sr-only" for="account_gender"> -->
+              <!-- <abbr title="requis">*</abbr> Genre</label> -->
+              <%= f.select :gender, User::GENDERS.collect { |p| [ p, p ] }, { include_blank: true }, class: 'select form-control' %>
             </div>
           </div>
           <div class="col-md-4 form-group space string required account_first_name">
-            <label class="string required control-label sr-only" for="account_first_name"><abbr title="requis">*</abbr> Prénom</label>
+            <!-- <label class="string required control-label sr-only" for="account_first_name"><abbr title="requis">*</abbr> Prénom</label> -->
             <%= f.text_field :first_name, class: 'string required form-control', placeholder: 'Prénom' %>
           </div>
           <div class="col-md-5 form-group space string required account_last_name">
-            <label class="string required control-label sr-only" for="account_last_name"><abbr title="requis">*</abbr> Nom de famille</label>
+            <!-- <label class="string required control-label sr-only" for="account_last_name"><abbr title="requis">*</abbr> Nom de famille</label> -->
             <%= f.text_field :last_name, class: 'string required form-control', placeholder: 'Nom' %>
           </div>
         </div>
         <div class="row form-row">
           <div class="col-md-12 form-group email required account_email">
-            <label class="email required control-label sr-only" for="account_email"><abbr title="requis">*</abbr> Email</label>
+            <!-- <label class="email required control-label sr-only" for="account_email"><abbr title="requis">*</abbr> Email</label> -->
             <%= f.email_field :email, autofocus: true, placeholder: 'Adresse email', class: 'string email required form-control' %>
           </div>
         </div>
         <div class="row form-row">
-          <div class="col-md-12 form-group"><a data-toggle="modal" class="pull-right" href="#password-modification-popin">Modifier mon mot de passe</a></div>
+          <div class="col-md-12 form-group">
+            <a data-toggle="modal" class="pull-right" data-target="#passwordmod" href="#" style="color: black;">Modifier mon mot de passe</a>
+          </div>
         </div>
         <hr>
     <div class="row form-row">
@@ -50,30 +49,30 @@
     <%= fields_for(@user.client) do |c| %>
       <div class="row form-row">
         <div class="col-md-12 form-group string optional account_master_patient_address">
-          <label class="string optional control-label sr-only" for="account_master_patient_address">Adresse</label>
+          <!-- <label class="string optional control-label sr-only" for="account_master_patient_address">Adresse</label> -->
           <%= c.text_field :address, class: 'string optional form-control', placeholder: 'Adresse' %>
         </div>
       </div>
       <div class="row form-row">
         <div class="col-md-4 form-group string optional account_master_patient_zipcode">
-          <label class="string optional control-label sr-only" for="account_master_patient_zipcode">Code postal</label>
+          <!-- <label class="string optional control-label sr-only" for="account_master_patient_zipcode">Code postal</label> -->
           <%= c.text_field :postal_code, class: 'string optional form-control', placeholder: 'Code postal' %>
         </div>
         <div class="col-md-8 form-group space string optional account_master_patient_city">
-          <label class="string optional control-label sr-only" for="account_master_patient_city">Ville</label>
+          <!-- <label class="string optional control-label sr-only" for="account_master_patient_city">Ville</label> -->
           <%= c.text_field :city, class: 'string optional form-control', placeholder: 'Ville' %>
         </div>
       </div>
       <hr>
       <div class="row form-row">
         <div class="col-md-6 form-group tel required account_phone_number">
-          <label class="tel required control-label sr-only" for="account_phone_number">
-          <abbr title="requis">*</abbr> Téléphone portable</label>
-          <input remote="/validators/phone_number" value="" class="string tel required form-control" maxlength="255" placeholder="Téléphone portable" type="tel" size="255" name="account[phone_number]" id="account_phone_number" autocomplete="off">
+          <!-- <label class="tel required control-label sr-only" for="account_phone_number"> -->
+          <!-- <abbr title="requis">*</abbr> Téléphone portable</label> -->
+          <%= c.text_field :phone, class: 'string tel required form-control', placeholder: 'Téléphone' %>
         </div>
       </div>
     <% end %>
-    <%= f.submit "Enregistrer", class: 'btn btn-default btn-cta btn-alternate' %>
+    <%= f.submit "Enregistrer", class: 'btn' %>
     <% end %>
     </div>
 
@@ -83,3 +82,5 @@
   </form>
   </div>
 </div>
+
+<%= render file: 'users/passwords/edit' %>

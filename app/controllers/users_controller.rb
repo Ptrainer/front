@@ -63,7 +63,6 @@ class UsersController < ApplicationController
   end
 
   def account
-    # raise current_user.inspect
     respond_to do |format|
       format.html { render :account }
       format.json { head :no_content }
@@ -73,6 +72,10 @@ class UsersController < ApplicationController
   def update_account
     @user.update(user_params)
     @user.client.update(client_params)
+    respond_to do |format|
+      format.html { render :account }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -84,10 +87,10 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :password)
+    params.require(:user).permit(:email, :first_name, :last_name, :password, :gender)
   end
 
   def client_params
-    params.require(:client).permit(:birthdate, :address, :city, :postal_code)
+    params.require(:client).permit(:birthdate, :address, :city, :postal_code, :phone)
   end
 end

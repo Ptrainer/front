@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20161127093539) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email",                  default: "", null: false
-    t.datetime "validation_date"
+    t.string   "gender"
     t.integer  "language_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
