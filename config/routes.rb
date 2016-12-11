@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   resources :users do
     get :account, on: :member
+    post :update_account, on: :member
   end
 end

@@ -1,6 +1,6 @@
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :account, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :account, :destroy, :update_account]
 
   # GET /users
   # GET /users.json
@@ -63,10 +63,16 @@ class UsersController < ApplicationController
   end
 
   def account
+    # raise current_user.inspect
     respond_to do |format|
       format.html { render :account }
       format.json { head :no_content }
     end
+  end
+
+  def update_account
+    @user.update(user_params)
+    @user.client.update(client_params)
   end
 
   private
@@ -78,6 +84,10 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :first_name, :last_name, :password)
+  end
+
+  def client_params
+    params.require(:client).permit(:birthdate, :address, :city, :postal_code)
   end
 end
